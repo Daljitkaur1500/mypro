@@ -1,106 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Training Report | CSE Student</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #e3f2fd, #ffffff);
-      color: #2c3e50;
+      background: linear-gradient(135deg, #e040fb, #7c4dff, #00e676);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .container {
       max-width: 960px;
       margin: 50px auto;
       padding: 30px;
-      background-color: #ffffff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
       text-align: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     }
 
     h1 {
-      font-size: 36px;
-      color: #0d47a1;
+      font-size: 38px;
       margin-bottom: 10px;
+      color: #ffeb3b;
     }
 
     h2 {
       font-size: 20px;
-      color: #37474f;
-      margin-top: 5px;
+      margin-top: 8px;
       font-weight: normal;
+      color: #e1f5fe;
     }
 
     p {
-      margin: 6px 0;
+      margin: 4px 0;
+      font-size: 16px;
+      color: #f3e5f5;
     }
 
     .button {
-      margin: 8px;
-      padding: 12px 24px;
+      margin: 10px;
+      padding: 12px 26px;
       font-size: 15px;
-      font-weight: 500;
+      font-weight: bold;
       border: none;
-      border-radius: 10px;
+      border-radius: 50px;
       cursor: pointer;
-      transition: transform 0.2s, background-color 0.3s;
+      transition: all 0.3s ease;
     }
 
     .button:hover {
-      transform: translateY(-2px);
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #fff;
     }
 
     .day-button {
-      background-color: #1565c0;
+      background-color: #d500f9;
       color: #fff;
-    }
-
-    .day-button:hover {
-      background-color: #0d47a1;
     }
 
     .cert-button {
-      background-color: #2e7d32;
+      background-color: #00c853;
       color: #fff;
-    }
-
-    .cert-button:hover {
-      background-color: #1b5e20;
     }
 
     .gallery-button {
-      background-color: #6a1b9a;
+      background-color: #ff4081;
       color: #fff;
-    }
-
-    .gallery-button:hover {
-      background-color: #4a148c;
     }
 
     .project-button {
-      background-color: #f57c00;
+      background-color: #651fff;
       color: #fff;
     }
 
-    .project-button:hover {
-      background-color: #e65100;
-    }
-
-    .button-group {
-      margin-top: 20px;
-    }
-
     .day-buttons {
-      margin: 20px auto;
-      max-width: 700px;
+      margin-top: 25px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+    }
+
+    .button-group {
+      margin-top: 25px;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 30px; }
+      .button {
+        width: 100%;
+        max-width: 250px;
+        margin: 8px auto;
+      }
     }
   </style>
 </head>
